@@ -1,15 +1,29 @@
 # Assignment 1
 # ICS3U
-# <your name>
+# Jesse Guram
 # March 28, 2018
 
-###### uncomment this when you are ready to work on it
-#def CtoF ():
-#
+if CtoF:
+    enter F
+else:
+    enter C
 
-###### uncomment this when you are ready to work on it
-#def FtoC ():
-#
 
+def CtoF(C):
+    """convert from celcius to fahrenheit"""
+    F = (1.8)*C+32
+
+    return F
 temperature = int(input('Enter your temperature in Celsius: '))
-print(temperature)
+print(int(round(CtoF(temperature))))
+
+
+
+def FtoC(F):
+    """convert from fahrenheit to celcius"""
+    C = (0.55556)*(F-32)
+
+    return C
+temperature = int(input('Enter your temperature in Fahrenheit:'))
+print(int(round(FtoC(temperature))))
+
