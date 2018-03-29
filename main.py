@@ -22,6 +22,7 @@ if x == 1:
     temperature1 = float(input('Enter your temperature in Celsius: '))
     if temperature1 < -273.15:
         print('Invalid Input')
+            SystemExit
     else:
         print(int(round(CtoF(temperature1))))
 
@@ -29,6 +30,7 @@ elif x == 2:
     temperature2 = float(input('Enter your temperature in Fahrenheit:'))
     if temperature2 < -459.67:
         print('Invalid Input')
+            SystemExit
     else:
         print(int(round(FtoC(temperature2))))
 else:
