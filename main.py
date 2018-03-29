@@ -19,14 +19,18 @@ print('enter 1 for Celcius or 2 Fahrenheit:')
 x = int(input())
 
 if x == 1:
-    temperature1 = int(input('Enter your temperature in Celsius: '))
-    print(int(round(CtoF(temperature1))))
-   
-elif x == 2:
-    temperature2 = int(input('Enter your temperature in Fahrenheit:'))
-    print(int(round(FtoC(temperature2))))
-    
+    temperature1 = float(input('Enter your temperature in Celsius: '))
+    if temperature1 < -273.15:
+        print('Invalid Input')
+    else:
+        print(int(round(CtoF(temperature1))))
 
+elif x == 2:
+    temperature2 = float(input('Enter your temperature in Fahrenheit:'))
+    if temperature2 < -459.67:
+        print('Invalid Input')
+    else:
+        print(int(round(FtoC(temperature2))))
 else:
     print('neither')
 
