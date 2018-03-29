@@ -15,26 +15,29 @@ def FtoC(F):
 
     return C
 
+
 print('enter 1 for Celcius or 2 Fahrenheit:')
 x = int(input())
+while True:
+    if x == 1:
+        temperature1 = float(input('Enter your temperature in Celsius: '))
+        if temperature1 < -273.15:
+            print('Invalid Input')
+            continue
+        else:
+            print(int(round(CtoF(temperature1))))
+            break
 
-if x == 1:
-    temperature1 = float(input('Enter your temperature in Celsius: '))
-    if temperature1 < -273.15:
-        print('Invalid Input')
-        SystemExit
+    elif x == 2:
+        temperature2 = float(input('Enter your temperature in Fahrenheit:'))
+        if temperature2 < -459.67:
+            print('Invalid Input')
+            continue
+        else:
+            print(int(round(FtoC(temperature2))))
+            break
     else:
-        print(int(round(CtoF(temperature1))))
-
-elif x == 2:
-    temperature2 = float(input('Enter your temperature in Fahrenheit:'))
-    if temperature2 < -459.67:
-        print('Invalid Input')
-        SystemExit
-    else:
-        print(int(round(FtoC(temperature2))))
-else:
-    print('neither')
+        print('Neither Celsius or Fahrenheit')
 
 
 
